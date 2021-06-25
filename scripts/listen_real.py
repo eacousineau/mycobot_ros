@@ -47,6 +47,7 @@ def talker():
             res.joint_5 * (math.pi / 180),
             res.joint_6 * (math.pi / 180),
         ]
+        print(radians_list)
         rospy.loginfo('res: {}'.format(radians_list))
 
         joint_state_send.position = radians_list
