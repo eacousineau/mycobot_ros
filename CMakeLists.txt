@@ -11,8 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation 
   actionlib
   # moveit_msgs
-  image_transport
-  cv_bridge
+  # image_transport
+  # cv_bridge
 )
 
 add_message_files(FILES
@@ -53,15 +53,15 @@ catkin_install_python(PROGRAMS
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-  PATTERN "setup_assistant.launch" EXCLUDE)
-install(DIRECTORY config DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+# install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+#   PATTERN "setup_assistant.launch" EXCLUDE)
+# install(DIRECTORY config DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
-find_package(OpenCV REQUIRED)
-add_executable(opencv_camera src/opencv_camera)
-target_link_libraries(opencv_camera ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
-add_executable(camera_display src/camera_display)
-target_link_libraries(camera_display ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+# find_package(OpenCV REQUIRED)
+# add_executable(opencv_camera src/opencv_camera)
+# target_link_libraries(opencv_camera ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+# add_executable(camera_display src/camera_display)
+# target_link_libraries(camera_display ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
