@@ -42,14 +42,14 @@ class Window:
 
         
         # joint 设置按钮
-        tk.Button(self.frmLT,text="设置",width=5, command=self.get_joint_input).grid(row=6, column=1, sticky="w", padx=3, pady=2)
+        tk.Button(self.frmLT,text="set q",width=5, command=self.get_joint_input).grid(row=6, column=1, sticky="w", padx=3, pady=2)
 
         # coordination 设置按钮
-        tk.Button(self.frmRT,text="设置",width=5, command=self.get_coord_input).grid(row=6, column=1, sticky="w", padx=3, pady=2)
+        tk.Button(self.frmRT,text="set x",width=5, command=self.get_coord_input).grid(row=6, column=1, sticky="w", padx=3, pady=2)
 
         # 夹爪开关按钮
-        tk.Button(self.frmLB,text="夹爪(开)",command=self.gripper_open,width=5).grid(row=1, column=0, sticky="w", padx=3, pady=50)
-        tk.Button(self.frmLB,text="夹爪(关)",command=self.gripper_close,width=5).grid(row=1, column=1, sticky="w", padx=3, pady=2)
+        tk.Button(self.frmLB,text="hand open",command=self.gripper_open,width=5).grid(row=1, column=0, sticky="w", padx=3, pady=50)
+        tk.Button(self.frmLB,text="hand close",command=self.gripper_close,width=5).grid(row=1, column=1, sticky="w", padx=3, pady=2)
     
     def connect_ser(self):
         rospy.init_node('simple_gui', anonymous=True)
