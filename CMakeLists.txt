@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   genmsg 
   message_generation 
   actionlib
-  moveit_msgs
+  # moveit_msgs
   image_transport
   cv_bridge
 )
@@ -32,7 +32,7 @@ generate_messages(DEPENDENCIES std_msgs)
 
 ## Declare a catkin package
 catkin_package(
-  CATKIN_DEPENDS message_runtime std_msgs actionlib moveit_msgs
+  CATKIN_DEPENDS message_runtime std_msgs actionlib #moveit_msgs
 )
 
 ## Build talker and listener
