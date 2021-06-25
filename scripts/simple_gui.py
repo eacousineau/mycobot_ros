@@ -10,7 +10,6 @@ from rospy import ServiceException
 class Window:
     def __init__(self,handle):
         self.win = handle
-        self.win.resizable(0,0) # 固定窗口大小
         
         self.model = 0
         self.speed = rospy.get_param("~speed", 50)
